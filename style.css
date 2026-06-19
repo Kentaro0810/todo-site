@@ -1,1 +1,146 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.app {
+  width: min(92%, 620px);
+  margin: 48px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 24px;
+  font-size: 28px;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+#todoInput {
+  flex: 1;
+  padding: 13px;
+  font-size: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+}
+
+#todoInput:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+#addButton {
+  padding: 13px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+#addButton:hover {
+  background: #1d4ed8;
+}
+
+.counter {
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+  margin: 20px 0;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 12px;
+}
+
+.counter p {
+  margin: 0;
+  font-weight: bold;
+}
+
+#todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 13px;
+  margin-bottom: 10px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.todo-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.todo-left input {
+  width: 18px;
+  height: 18px;
+}
+
+.todo-text {
+  font-size: 16px;
+  word-break: break-word;
+}
+
+.completed .todo-text {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.delete-button {
+  border: none;
+  background: #ef4444;
+  color: white;
+  padding: 8px 11px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.delete-button:hover {
+  background: #dc2626;
+}
+
+@media (max-width: 480px) {
+  .app {
+    margin: 24px auto;
+    padding: 18px;
+  }
+
+  .input-area {
+    flex-direction: column;
+  }
+
+  #addButton {
+    width: 100%;
+  }
+
+  .counter {
+    flex-direction: column;
+    text-align: center;
+  }
+}
