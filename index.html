@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>自分用ToDo管理サイト</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- CSSファイルを読み込む -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>自分用ToDo</h1>
+
+    <section class="input-area">
+      <input id="todoInput" type="text" placeholder="やることを入力">
+      <button id="addButton">追加</button>
+    </section>
+
+    <section class="counter">
+      <p>未完了：<span id="activeCount">0</span>件</p>
+      <p>完了：<span id="completedCount">0</span>件</p>
+    </section>
+
+    <ul id="todoList"></ul>
+  </main>
+
+  <!-- JavaScriptファイルを読み込む -->
+  <script src="script.js"></script>
+</body>
+</html>
